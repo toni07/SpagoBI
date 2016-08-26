@@ -9,7 +9,8 @@
 
 * [Introduction](#introduction)
 * [GEi overall description](#gei-overall-description)
-* [Build and Install](#build-and-install)
+* [Build](#build)
+* [Install](#install)
 * [Running](#running)
 * [REST API Example](#rest-api-example)
 * [API Reference Documentation](#api-reference-documentation)
@@ -33,6 +34,10 @@ You can find the User & Programmer's Manual and the Administration Guide on [rea
 SpagoBI is the only entirely Open Source Business Intelligence suite. It covers all the analytical areas of Business Intelligence projects, with innovative themes and engines.
 
 If this is your first contact with SpagoBI, it is highly recommended to have a look to the brief [Demo](http://demo.spagobi.org/Demo/index.html#).
+
+## Build
+
+With Maven, in spago-parent project, run 'clean install' command.
 
 ## Install
 
