@@ -2,6 +2,7 @@ site_name: SpagoBI
 site_url: https://spagobi.readthedocs.org
 repo_url: https://github.com/SpagoBILabs/SpagoBI.git
 site_description: SpagoBI Documentation
+google_analytics: ['UA-85046107-1', 'spagobi.readthedocs.io']
 docs_dir: doc
 site_dir: html
 markdown_extensions: [toc,fenced_code]
@@ -18,5 +19,7 @@ pages:
     - 'Admin Guide': 'admin/README.md'
     - 'Sanity check procedures': 'admin/sanity.md'
     - 'Diagnosis procedures': 'admin/diagnosis.md'
+    - 'FIWARE theme': 'admin/theme.md'
 - 'Docker' : 'docker/README.md'
+
 

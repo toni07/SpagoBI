@@ -7,7 +7,9 @@ Introduction
 What is NGSI?
 -------------
 NGSI is a protocol developed by OMA to manage Context Information. It provides operations like:
-* Manage the Context Information about Context Entities, for example the lifetime and quality of information.* Access (query, subscribe/notify) to the available Context Information about Context Entities.
+
+* Manage the Context Information about Context Entities, for example the lifetime and quality of information.
+* Access (query, subscribe/notify) to the available Context Information about Context Entities.
 
 The FI-WARE version of the OMA NGSI interface is a RESTful API via HTTP. Its purpose is to exchange context information. The three main interaction types are
 
@@ -374,3 +376,20 @@ In addition to Console Engine it's also possible to add notifications capabiliti
 You can see the entire video of DataSet creation and Document usage (gif animated):
 
 ![](media/Screencast_DataSet_Console_Document.gif)
+
+New Scheduled KPI dispatching option
+-------------------
+User can now choose to dispatch the result of a scheduled KPI to context broker.
+By accessing scheduling details page, user can enable context broker dispatch option and fill context broker url and context broker type texts (look at screenshot).
+![](media/9_ContextBrokerDispatching.png)
+When scheduled KPI is executed results will be sent to context broker. 
+Each entity sent is identified by KPI label.
+Context broker type is sent as type field, in order to be able to group entities in families.
+
+KPI Alarm notification to context broker
+-------------------
+By defining a context broker url in KPI Alarm detail page, when an alarm event is thrown it will be sent also to context broker. (Look at screenshot) 
+The context broker type is sent as a type field in order to be able to group entities in families, while each entity is identified by alarm label. 
+
+![](media/10_AlarmDetail.png)
+
