@@ -127,12 +127,14 @@
     <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
     <url-pattern>/servlet/AdapterHTTP</url-pattern>
   </filter-mapping>  
- ${enable.cas.start} END-CAS --> 
+ ${enable.cas.start} END-CAS -->
 
+    <!-- START OAUTH 2
 	<filter-mapping>
 		<filter-name>OAuthFilter</filter-name>
 		<url-pattern>/servlet/AdapterHTTP</url-pattern>
 	</filter-mapping>
+	END OAUTH 2 -->
 
 	<filter-mapping>
 		<filter-name>ProfileFilter</filter-name>
