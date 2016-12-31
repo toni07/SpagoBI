@@ -131,7 +131,7 @@ public class ChannelUtilities {
 		// get mode of execution
 		String sbiMode = (String)spagoconfig.getConfigValue("SPAGOBI.SPAGOBI-MODE.mode");   
 		if (sbiMode==null) {
-			logger.error("SPAGOBI.SPAGOBI-MODE.mode IS NULL");
+			logger.error("SPAGOBI.SPAGOBI-MODE.mode IS NULL => isWebRunning() is false");
 			return false;
 		}
 		if( sbiMode.equalsIgnoreCase("WEB") ) {
