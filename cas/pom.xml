@@ -4,8 +4,11 @@
 		<artifactId>cas-server</artifactId>
 		<version>3.3.3</version>
 	</parent>
+    <modules>
+        <module>../SpagoBIWebV2</module>
+    </modules>
 
-	<repositories>
+    <repositories>
 		<repository>
 			<id>spagobi-releases</id>
 			<url>https://raw.github.com/SpagoBILabs/SpagoBI/mvn-repo/releases</url>
@@ -14,7 +17,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>cas-server-webapp</artifactId>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 	<name>CAS</name>
 
 	<properties>

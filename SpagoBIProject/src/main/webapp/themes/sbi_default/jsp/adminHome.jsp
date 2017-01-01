@@ -67,6 +67,7 @@ Ext.onReady(function () {
     }
     
     <%if (isDirectExec.equals("FALSE")){%>
+        console.log('info toni07: this is added to the content of the main page');
 		this.mainpanel =  Ext.create("Ext.panel.Panel",{
 	    	autoScroll: true,
 	    	height: '100%',

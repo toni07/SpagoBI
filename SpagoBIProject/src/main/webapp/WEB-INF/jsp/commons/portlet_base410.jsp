@@ -1,15 +1,8 @@
+<%@ page language="java" pageEncoding="utf-8" session="true" %>
 <%-- SpagoBI, the Open Source Business Intelligence suite
-
 Copyright (C) 2012 Engineering Ingegneria Informatica S.p.A. - SpagoBI Competency Center
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0, without the "Incompatible With Secondary Licenses" notice. 
 If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. --%>
-
-<%@ page language="java"
-         
-         pageEncoding="utf-8"
-         session="true" 
-%>
-
 <%-- ---------------------------------------------------------------------- --%>
 <%-- ERROR PAGE																--%>
 <%-- ---------------------------------------------------------------------- --%>
@@ -17,12 +10,10 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 <%-- must be commented in development environment.							--%>												
 <%-- ---------------------------------------------------------------------- --%>
 <%@page errorPage="/WEB-INF/jsp/commons/genericError.jsp"%>
-
 <%-- ---------------------------------------------------------------------- --%>
 <%-- TAG LIBRARIES													--%>
 <%-- ---------------------------------------------------------------------- --%>
 <%@ taglib uri="/WEB-INF/tlds/spagobi.tld" prefix="spagobi" %>
-
 <%-- ---------------------------------------------------------------------- --%>
 <%-- JAVA IMPORTS															--%>
 <%-- ---------------------------------------------------------------------- --%>
@@ -51,20 +42,10 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 <%@page import="org.apache.commons.lang.StringEscapeUtils"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
-
-
-
 <%-- ---------------------------------------------------------------------- --%>
 <%-- JAVA CODE 																--%>
 <%-- ---------------------------------------------------------------------- --%>
 <%
-	//Enumeration headers = request.getHeaderNames();
-	//while (headers.hasMoreElements()) {
-	//	String headerName = (String) headers.nextElement();
-	//	String header = request.getHeader(headerName);
-	//	System.out.println(header + ": ");
-	//}
-
 	RequestContainer aRequestContainer = null;
 	ResponseContainer aResponseContainer = null;
 	SessionContainer aSessionContainer = null;
@@ -193,41 +174,17 @@ If a copy of the MPL was not distributed with this file, You can obtain one at h
 	request.getSession().setAttribute(Constants.USER_LANGUAGE, locale.getLanguage());
 	request.getSession().setAttribute(Constants.USER_COUNTRY, locale.getCountry());
 %>
-
 <%-- ---------------------------------------------------------------------- --%>
 <%-- HTML	 																--%>
 <%-- ---------------------------------------------------------------------- --%>
-
-<!-- based on ecexution mode include initial html  -->   
+<!-- based on ecexution mode include initial html  -->
 <% if (sbiMode.equalsIgnoreCase("WEB")){ %> 
 	<html lang="<%=locale != null ? locale.getLanguage() : GeneralUtilities.getDefaultLocale().getLanguage()%>">
 		<head>
 			<title>SpagoBI</title>
-			<% if (forceIE8Compatibility == true){ %> 
-			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-			<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-			
-			<%} %>
 			<link rel="shortcut icon" href="<%=urlBuilder.getResourceLinkByTheme(request, "img/favicon.ico", currTheme)%>" />
 		</head>
-		
-		<!--[if IE 8]>
-	        <body class="lte-8 ie-8">
-	    <![endif]-->
-	    <!--[if lte IE 7]>
-	        <body class="lte-8 lte-7">
-	    <![endif]-->
-	    <!--[if gt IE 8]>
-	        <body class="ie-9">
-	    <![endif]-->
-	    <!--[if !IE]><!-->
         <body>
-        <script>  
-			if (/*@cc_on!@*/false) {  
-				document.documentElement.className+=' ie10';  
-			}  
-		</script>
-     	<!--<![endif]-->
 <%} %>
 
 
